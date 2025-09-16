@@ -41,7 +41,7 @@ export const fetchOpenMeteoWeather = async (city: string) => {
     }
     
     // 按人口數量排序結果，優先選擇人口較多的城市
-    const sortedResults = geocodingData.results.sort((a, b) => {
+    const sortedResults = geocodingData.results.sort((a: any, b: any) => {
       const populationA = a.population || 0
       const populationB = b.population || 0
       return populationB - populationA
